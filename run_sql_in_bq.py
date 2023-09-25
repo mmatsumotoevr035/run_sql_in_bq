@@ -51,7 +51,7 @@ def execute_sql_queries_in_folder(folder_path):
     sql_files = [f for f in os.listdir(folder_path) if f.endswith('.sql')]
 
     # 念のためプロジェクトID指定
-    project_id = 'BQのプロジェクトIDを記載'
+    project_id = '★BQのプロジェクトIDを記載'
 
     # すべてのSQLファイルにつきtry:以下のコードを実行
     for sql_file in sql_files:
@@ -62,7 +62,7 @@ def execute_sql_queries_in_folder(folder_path):
         sql_file_name = os.path.splitext(os.path.basename(sql_file_path))[0]
 
         # csv名をファイル名から定義
-        new_csv_file_path = r'保存したいcsvのフォルダパスを記載' + f'\{sql_file_name}.csv'
+        new_csv_file_path = r'★保存したいcsvのフォルダパスを記載' + f'\{sql_file_name}.csv'
         # f文字列等について参考：https://note.nkmk.me/python-f-strings/
 
         try:
@@ -79,7 +79,7 @@ def execute_sql_queries_in_folder(folder_path):
             print(f"Error executing query: {str(e)}")
 
 
-folder_path = r'SQLファイルを格納したフォルダパスを記載'
+folder_path = r'★SQLファイルを格納したフォルダパスを記載'
 ##フォルダパスをraw文字列（r接頭辞を付ける）として指定
 
 execute_sql_queries_in_folder(folder_path)
